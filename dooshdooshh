@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/vuxem/5/edit
+-->
+<head>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://code.jquery.com/jquery-git2.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  <button id=charles> animate </button>
+
+<script>
+var width = 300;
+var height = 300;
+var numberofsquares = 3;
+console.log("yoga");
+var r = [];
+
+var win = Raphael(50,50,width,height);
+ 
+for (var fiat=0; fiat<numberofsquares;fiat++){
+  r[fiat]=win.image("http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons-256/orange-fiesta-icons-animals/013823-orange-fiesta-icon-animals-animal-cat1.png",100,400,300,200);
+}
+
+
+function jazz(){
+
+var h = new Array(); 
+var w = new Array();
+  
+  for (var i =0; i<numberofsquares; i++) {
+    h[i] = Math.random()*height;
+  }
+      
+  for (var k =0; k<numberofsquares; k++) {
+    w[k] = Math.random()*width;
+  }
+  
+  for (var m=0;m<numberofsquares;m++){
+  r[m].animate({x:w[m],y:h[m]},1000);
+}
+   r[numberofsquares-1].animate({x:w[numberofsquares-1],y:h[numberofsquares-1]},1000,jazz);
+
+  
+
+
+}
+
+//jazz();
+
+$("#charles").click(jazz);
+</script>
+</body>
+</html>
